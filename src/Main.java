@@ -1,13 +1,29 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    IO.println(String.format("Hello and welcome!"));
+/**
+ * Main class for Use Case 2: Room Initialization
+ * Version: 2.1
+ */
+public class UseCase2RoomInitialization {
+    public static void main(String[] args) {
+        // Static availability
+        int singleRoomAvailable = 5;
+        int doubleRoomAvailable = 3;
+        int suiteRoomAvailable = 2;
 
-    for (int i = 1; i <= 5; i++) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        IO.println("i = " + i);
+        // Initialize room objects
+        Room singleRoom = new SingleRoom(1, 50.0);
+        Room doubleRoom = new DoubleRoom(2, 80.0);
+        Room suiteRoom = new SuiteRoom(3, 150.0);
+
+        // Display room details and availability
+        singleRoom.displayRoomDetails();
+        System.out.println("Available: " + singleRoomAvailable);
+        System.out.println();
+
+        doubleRoom.displayRoomDetails();
+        System.out.println("Available: " + doubleRoomAvailable);
+        System.out.println();
+
+        suiteRoom.displayRoomDetails();
+        System.out.println("Available: " + suiteRoomAvailable);
     }
 }
